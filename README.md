@@ -4,7 +4,7 @@ Interactive React + TypeScript application that lets users configure a multi-day
 
 > Replace the placeholders below with your actual GitHub/deployment URLs before submitting.
 
-- Repo: https://github.com/your-account/hotel-booking
+- Repo: https://github.com/Radenix/hotel-booking
 - Demo: https://your-app.vercel.app
 
 ## Tech Stack
