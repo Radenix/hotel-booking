@@ -53,7 +53,6 @@ const dailySelectionsSlice = createSlice({
     },
     syncWithDates: (state, action: PayloadAction<string[]>) => {
       const tripDates = action.payload
-      const dateSet = new Set(tripDates)
       const next: DailySelectionsState = {}
 
       tripDates.forEach((date) => {
@@ -68,4 +67,5 @@ const dailySelectionsSlice = createSlice({
 export const { updateHotel, updateMeal, clearMeals, syncWithDates } =
   dailySelectionsSlice.actions
 export default dailySelectionsSlice.reducer
+
 

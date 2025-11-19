@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from './store/hooks'
 import {
   updateConfig,
   updateBoardType,
+  type ConfigKey,
 } from './store/slices/tripConfigSlice'
 import {
   updateHotel,
@@ -18,6 +19,7 @@ import {
   mealsByCountry,
   type BoardType,
 } from './data'
+import type { TripConfig } from './store/slices/tripConfigSlice'
 
 type BoardCode = BoardType['code']
 
@@ -81,9 +83,9 @@ function App() {
   const mealOptions = mealsByCountry[config.destination]
   const boardMeta = boardTypes.find((type) => type.code === config.boardType)
 
-  const handleConfigChange = <K extends keyof typeof config>(
+  const handleConfigChange = <K extends ConfigKey>(
     key: K,
-    value: typeof config[K],
+    value: TripConfig[K],
   ) => {
     dispatch(updateConfig({ key, value }))
   }

@@ -2,6 +2,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { countries, type BoardType } from '../../data'
 
 type BoardCode = BoardType['code']
+export type ConfigKey = Exclude<keyof TripConfig, 'boardType'>
 
 export type TripConfig = {
   citizenship: string
@@ -27,17 +28,16 @@ const tripConfigSlice = createSlice({
   reducers: {
     updateConfig: (
       state,
-      action: PayloadAction<{
-        key: keyof TripConfig
-        value: string | number | BoardCode
-      }>,
+      action: PayloadAction<{ key: ConfigKey; value: TripConfig[ConfigKey] }>,
     ) => {
       const { key, value } = action.payload
+
       if (key === 'days') {
-        state[key] = Number(value) as number
-      } else {
-        state[key] = value as TripConfig[typeof key]
+        state.days = Number(value) || 1
+        return
       }
+
+      state[key] = value as TripConfig[typeof key]
     },
     updateBoardType: (state, action: PayloadAction<BoardCode>) => {
       state.boardType = action.payload
@@ -47,4 +47,5 @@ const tripConfigSlice = createSlice({
 
 export const { updateConfig, updateBoardType } = tripConfigSlice.actions
 export default tripConfigSlice.reducer
+
 

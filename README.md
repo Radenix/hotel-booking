@@ -2,10 +2,9 @@
 
 Interactive React + TypeScript application that lets users configure a multi-day trip, choose hotels per destination, enforce board-type meal rules, and see real-time pricing summaries.
 
-> Replace the placeholders below with your actual GitHub/deployment URLs before submitting.
 
-- Repo: https://github.com/your-account/hotel-booking
-- Demo: https://your-app.vercel.app
+- Repo: https://github.com/Radenix/hotel-booking
+- Demo: 
 
 ## Tech Stack
 
@@ -345,37 +344,6 @@ While Jest + React Testing Library are not included to keep the submission light
 - Loading states display
 - Responsive layout behavior
 - Animation triggers
-
-## Deployment
-
-### Build Process
-
-1. **Create production build:**
-   ```bash
-   npm run build
-   ```
-
-2. **Preview locally:**
-   ```bash
-   npm run preview
-   ```
-
-### Deployment Options
-
-The generated `dist/` folder can be deployed to:
-
-- **Vercel** - Zero-config deployment with Git integration
-- **Netlify** - Static site hosting with CI/CD
-- **Azure Static Web Apps** - Microsoft cloud hosting
-- **AWS S3 + CloudFront** - Scalable static hosting
-- **GitHub Pages** - Free hosting for public repos
-
-### Deployment Steps
-
-1. Run `npm run build` to create the production build
-2. Upload the `dist/` folder contents to your hosting provider
-3. Configure your hosting provider for SPA routing (if needed)
-4. Update the repo/demo links at the top of this README
 
 ## Development Notes
 
