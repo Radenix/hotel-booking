@@ -4,7 +4,7 @@ Interactive React + TypeScript application that lets users configure a multi-day
 
 
 - Repo: https://github.com/Radenix/hotel-booking
-- Demo: hotel-booking-assestment.vercel.app
+- Demo: https://hotel-booking-assestment.vercel.app
 
 ## Tech Stack
 
